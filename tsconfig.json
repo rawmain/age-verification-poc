@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "importHelpers": true,
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "allowJs": false,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "strictFunctionTypes": true,
+    "useUnknownInCatchVariables": true
+  },
+  "exclude": ["node_modules", "website"],
+  "extends": "@react-native/typescript-config/tsconfig.json"
+}

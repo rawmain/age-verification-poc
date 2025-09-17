@@ -1,7 +1,5 @@
-# All files are owned by @pagopa/io-wallet
-* @pagopa/io-wallet
-
-# All files are also owned by @sebastianopriscan,
-# except for those under /website
-* @sebastianopriscan
+# All files under /website are owned only by @pagopa/io-wallet
 /website/* @pagopa/io-wallet
+
+# All other files are owned by both @pagopa/io-wallet and @sebastianopriscan
+* @pagopa/io-wallet @sebastianopriscan
