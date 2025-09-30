@@ -1,0 +1,62 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+default_platform :android
+
+platform :android do
+  desc "Build the App in release mode"
+  lane :build_release do
+    gradle(
+      task: "bundle",
+      build_type: "Release",
+    )
+  end
+
+  desc "Build the App in release mode and deploy in alpha track on the Google Play Store"
+  lane :alpha_playstore do |options|
+    # Sets the version name
+    android_set_version_name(
+      version_name: options[:version]
+    )
+
+    # Increments the version code
+    android_set_version_code
+
+    build_release
+
+    # Generate the changelog from the last commit message
+    changelog_from_git_commits(
+      commits_count: 1
+    )
+
+    upload_to_play_store(
+      track: "internal",
+      skip_upload_screenshots: true,
+      skip_upload_images: true
+    )
+  end
+
+  desc "Download universal APK file from Google Play"
+  lane :download_apk do
+    version_code = ENV['VERSION_CODE'].to_i
+    download_universal_apk_from_google_play(
+      package_name: "it.pagopa.app.ageverification",
+      destination: "AgeVerification-universal.apk",
+      version_code: version_code
+    )
+  end
+end
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://docs.fastlane.tools/actions
+
+# fastlane reports which actions are used
+# No personal data is sent or shared. Learn more at https://github.com/fastlane/enhancer
