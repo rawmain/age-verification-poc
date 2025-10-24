@@ -4,6 +4,7 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {Provider} from 'react-redux';
 import {
   IODSExperimentalContextProvider,
+  IONewTypefaceContextProvider,
   IOThemeContextProvider,
   ToastProvider
 } from '@pagopa/io-app-design-system';
@@ -17,16 +18,18 @@ function App(): React.JSX.Element {
   return (
     <GestureHandlerRootView style={style.gestureHandler}>
       <SafeAreaProvider>
-        <IODSExperimentalContextProvider isExperimentaEnabled={true}>
-          <IOThemeContextProvider theme={'light'}>
-            <Provider store={store}>
-              <PersistGate loading={null} persistor={persistor}>
-                <ToastProvider>
-                  <RootContainer />
-                </ToastProvider>
-              </PersistGate>
-            </Provider>
-          </IOThemeContextProvider>
+        <IODSExperimentalContextProvider>
+          <IONewTypefaceContextProvider>
+            <IOThemeContextProvider theme={'light'}>
+              <Provider store={store}>
+                <PersistGate loading={null} persistor={persistor}>
+                  <ToastProvider>
+                    <RootContainer />
+                  </ToastProvider>
+                </PersistGate>
+              </Provider>
+            </IOThemeContextProvider>
+          </IONewTypefaceContextProvider>
         </IODSExperimentalContextProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
