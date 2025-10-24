@@ -1,5 +1,5 @@
 import {createNavigationContainerRef} from '@react-navigation/native';
-import {RootStackParamList} from './RootStacknavigator';
+import {RootStackParamList} from './RootStackNavigator';
 
 /**
  * Navigation reference which can be used to navigate outside of React context.
