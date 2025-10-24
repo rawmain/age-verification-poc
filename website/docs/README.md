@@ -313,9 +313,24 @@ This poses a risk of **key extraction** and **credential misuse**.
 - **Short-lived Credentials:** Issue time-bound credentials (ideally one-time-use or valid for less than 24h).
 - **On-demand Issuance:** Replace batch issuance with per-request issuance to reduce attack surface.
 
+```
+
+## 6. Data Protection Analysis 
+### 6.1 Analysis of Technical, Legal, and Organizational Requirements for Full Compliance with Resolution No. 96/25/CONS and Related Garante Opinions, also in Relation to its Potential Use within the APP IO and/or the IT-Wallet System.
+
+The Age Verification solution—whether integrated into the **APP IO** environment or deployed via the core **IT-Wallet System**—is compliant with all technical, legal, and organizational mandates, specifically adhering to the core privacy principles established by the **GDPR (Art. 5(1))** and the **eIDAS 2.0** framework. Crucially, the system meets the high standards established by the **AGCOM Resolution No. 96/25/CONS**, which requires verifying the age of users with a system that ensures a **"level of security adequate to the risk and the respect of the minimization of personal data collected for the purpose"**.
+
+**Technically and Organizationally,** the solution is built upon the **European Digital Identity (EUDI) Wallet Architecture and Reference Framework (ARF)**, leveraging foundational technical standards for **interoperability, security, and privacy**. The core technical safeguard is **Selective Disclosure (SD)**, which allows the User to present only a cryptographically verified **Boolean attribute** (e.g., *Over 18: True*). This device-based proof model ensures that the Verifier never accesses the raw Date of Birth, thereby guaranteeing **data minimization**. Furthermore, to prevent tracking or profiling, the IT-Wallet's organizational structure, defined applicable legislation, enforces: 1) **logical separation** of personal data from other services provided by the Wallet Provider (PagoPA) and 2) the **non-storage of sensitive content** by the Issuer (IPZS), which retains only the **HASH** of the Attestation for revocation purposes, which is non-personal data.
+
+**Legally**, the system operates based on a clear dual foundation: the issuance of the Attestation by public entities (IPZS and PagoPA, legally mandated) relies on a **Public Interest Task (Art. 6(1)(e) GDPR)**, while the actual **use and presentation** of the age proof is strictly conditional upon the **explicit and informed consent of the User**. This robust framework confirms our solution as **effective, suitable, proportional, and functional**, aligning with the "highly recommended" modalities promoted by AGCOM and satisfying the requirements set forth by the Garante for a privacy-preserving Age Assurance solution.
+
+### 6.2 Conclusion on Age Verification Risk
+
+The decentralised architecture and the mandatory use of Selective Disclosure techniques ensure that the risks of central surveillance, tracking, and data aggregation are minimised. By reducing the shared attribute from the raw Date of Birth to a **minimal, purpose-specific Boolean proof**, the IT-Wallet's Age Verification component adheres to the highest standard of **Data Protection by Design**, successfully balancing security, usability, and data privacy. The residual risk to the rights and freedoms of the Data Subject is deemed **low and manageable** through the defined technical and organisational controls.
+
 ---
 
-## 6. References
+## 7. References
 
 - [OID4VCI Specification](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)
 - [OID4VP Specification](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)
