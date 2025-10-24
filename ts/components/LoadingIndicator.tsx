@@ -13,10 +13,10 @@ export type LoadingIndicator = WithTestID<
  * Loading indicator component which renders a loading spinner with 48 size.
  */
 export const LoadingIndicator = ({
-  accessibilityHint = i18next.t('activityIndicator.hint', {
+  accessibilityHint = i18next.t('loadingSpinnerAccessibility.hint', {
     ns: 'global'
   }),
-  accessibilityLabel = i18next.t('activityIndicator.label', {
+  accessibilityLabel = i18next.t('loadingSpinnerAccessibility.label', {
     ns: 'global'
   }),
   testID = 'LoadingIndicator'
