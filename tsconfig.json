@@ -10,7 +10,7 @@
     "noUnusedLocals": true,
     "strictFunctionTypes": true,
     "useUnknownInCatchVariables": true,
-    "types": ["redux-persist"]
+    "types": ["redux-persist", "jest"]
   },
   "exclude": ["node_modules", "website"],
   "extends": "@react-native/typescript-config/tsconfig.json"
