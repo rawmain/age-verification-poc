@@ -39,7 +39,7 @@ type OperationResultScreenContentProps = WithTestID<{
 
 /**
  * A screen component which displays the result of an operation.
- * I can either be a successfull operation or a failed one.
+ * It can either be a successful operation or a failed one.
  * It shows a pictogram, a title, a subtitle, and action buttons.
  * @param pictogram - The pictogram to display.
  * @param title - The title of the screen.

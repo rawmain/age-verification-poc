@@ -35,7 +35,7 @@ const preferencesSlice = createSlice({
     preferencesSetIsOnboardingDone: state => {
       state.isOnboardingComplete = true;
     },
-    // Fingerpint
+    // Fingerprint
     preferencesSetIsBiometricEnabled: (
       state,
       action: PayloadAction<boolean>
@@ -87,7 +87,7 @@ export const selectisOnboardingComplete = (state: RootState) =>
 /**
  * Selects if the biometric is enabled.
  * @param state - The root state of the Redux store
- * @returns a boolean indicating weather the biometric is enabled
+ * @returns a boolean indicating whether the biometric is enabled
  */
 export const selectIsBiometricEnabled = (state: RootState) =>
   state.preferences.isBiometricEnabled;

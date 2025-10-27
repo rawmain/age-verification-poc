@@ -21,7 +21,6 @@ export type RootStackParamList = {
   // Root level
   [ROOT_ROUTES.ERROR]: undefined;
   [ROOT_ROUTES.LOADING]: undefined;
-  [ROOT_ROUTES.ERROR]: undefined;
 
   // Nested navigators
   [ROOT_ROUTES.ONBOARDING_NAV]: NavigatorScreenParams<OnboardingNavigatorParamsList>;
