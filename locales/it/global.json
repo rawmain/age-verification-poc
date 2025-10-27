@@ -1,0 +1,17 @@
+{
+  "loading": {
+    "title": "Stiamo preparando la tua esperienza in app"
+  },
+  "buttons": {
+    "start": "Inizia",
+    "close": "Chiudi",
+    "help": "Aiuto"
+  },
+  "clipboard": {
+    "copyFeedback": "Copiato nella clipboard"
+  },
+  "loadingSpinnerAccessibility": {
+    "label": "Caricamento",
+    "hint": "Attendere il caricamento del contenuto"
+  }
+}

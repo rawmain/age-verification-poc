@@ -24,7 +24,7 @@ platform :android do
   lane :alpha_playstore do |options|
     # Sets the version name
     android_set_version_name(
-      version_name: options[:version]
+      version_name: "#{ENV['APP_VERSION']}"
     )
 
     # Increments the version code
