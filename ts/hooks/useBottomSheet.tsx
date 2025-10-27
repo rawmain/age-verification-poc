@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: IOBottomSheetHeaderRadius,
     borderCurve: 'continuous',
     // Don't delete the overflow property
-    // oterwise the above borderRadius won't work
+    // otherwise the above borderRadius won't work
     overflow: 'hidden'
   }
 });
