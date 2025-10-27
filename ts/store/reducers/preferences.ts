@@ -35,7 +35,7 @@ const preferencesSlice = createSlice({
     preferencesSetIsOnboardingDone: state => {
       state.isOnboardingComplete = true;
     },
-    // Fingerpint
+    // Fingerprint
     preferencesSetIsBiometricEnabled: (
       state,
       action: PayloadAction<boolean>
