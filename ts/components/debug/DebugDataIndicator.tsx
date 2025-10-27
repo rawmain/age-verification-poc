@@ -5,9 +5,9 @@ import {
   Icon,
   hexToRgba
 } from '@pagopa/io-app-design-system';
-import _ from 'lodash';
 import * as React from 'react';
 import {Pressable, StyleSheet} from 'react-native';
+import {size} from 'lodash';
 import {selectDebugData} from '../../store/reducers/debug';
 import {useAppSelector} from '../../store';
 
@@ -21,7 +21,7 @@ type DebugDataIndicatorProps = {
  */
 export const DebugDataIndicator = (props: DebugDataIndicatorProps) => {
   const data = useAppSelector(selectDebugData);
-  const dataSize = _.size(data);
+  const dataSize = size(data);
 
   if (dataSize === 0) {
     return null;

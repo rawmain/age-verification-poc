@@ -1,9 +1,7 @@
 /* eslint-disable functional/immutable-data */
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import _ from 'lodash';
 import {PersistConfig, persistReducer} from 'redux-persist';
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-
 import {RootState} from '../types';
 import {preferencesReset} from './preferences';
 
@@ -50,7 +48,7 @@ const debugSlice = createSlice({
   },
   extraReducers: builder => {
     // This happens when the whole app state is reset
-    builder.addCase(preferencesReset, __ => initialState);
+    builder.addCase(preferencesReset, _ => initialState);
   }
 });
 
